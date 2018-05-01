@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text} from 'react-native'
+import {View, Text, StyleSheet} from 'react-native'
 import moment from 'moment'
 
 export default class Row extends React.Component{
@@ -20,13 +20,41 @@ export default class Row extends React.Component{
         )
     }
 
+    icon () {
+        const type = this.props.day.weather[0].main.toLocaleLowerCase();
+        return (
+            <Text>{type}</Text>
+        )
+    }
+
     render() {
         return (
-    <View>
+    <View style={style.view}>
         <Text>{this.day()} {this.date()}</Text>
-        <Text>{this.props.day.temp.day}°C</Text>
+        {this.icon()}
+        <Text style={style.temp}>{this.props.day.temp.day}°C</Text>
 
     </View>
         )
     }
 }
+
+const style = StyleSheet.create({
+view : {
+    borderWidth:0,
+    borderBottomWidth:1,
+    borderBottomColor : '#202340',
+    paddingHorizontal:20,
+    paddingVertical:10,
+    flex:1,
+    flexDirection:'row',
+    justifyContent:'space-between'
+},
+    temp:{
+        color:"#F00",
+        fontWeight : 'bold',
+        fontSize : 22
+    }
+
+
+})
