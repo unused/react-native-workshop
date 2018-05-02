@@ -20,6 +20,8 @@ $ npm run start
 $ npm install -g create-react-native-app # install create native
 $ create-react-native-app weather-app # setup new project
 
+$ npm install --save query-string moment react-native-navigation # add dependencies
+
 # Workshop Steps:
 #   - create new project
 #   - explain file structure

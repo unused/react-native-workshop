@@ -31,11 +31,12 @@ const Tabs = TabNavigator({
   }
 );
 
+// <StatusBar hidden={true} /> Note: breaks Android Emulator(!)
 export default class App extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <StatusBar hidden={true} /> <Tabs/>
+        <Tabs />
       </View>
     );
   }
