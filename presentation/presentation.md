@@ -5,6 +5,7 @@
 
 - React Basics
 - We Build a Weather App
+- Not covered: Testing :(
 
 ## React Native
 
@@ -13,8 +14,10 @@
 
 ## Props and State
 
-- Immutable Props (JavaScript has no immutables!)
-- State via Store
+Components have...
+
+  - Immutable Props, Note: JavaScript has no immutables!
+  - State via Store
 
 ## Templates via JSX
 
@@ -25,5 +28,5 @@
 
 ```
 $ npm install -g create-react-native-app
-$ create-react-native-app demo-weather-app
+$ create-react-native-app weather-app
 ```
