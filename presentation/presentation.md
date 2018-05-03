@@ -10,6 +10,7 @@
 ## React Native
 
 - JavaScript (Node.js) to Native (iOS, Android)
+- Structured in Components
 - Flux Architecture (Observer Pattern)
 
 ## Props and State
@@ -30,3 +31,5 @@ Components have...
 $ npm install -g create-react-native-app
 $ create-react-native-app weather-app
 ```
+
+# https://github.com/unused/react-native-workshop

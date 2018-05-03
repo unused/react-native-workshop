@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StatusBar } from 'react-native'
+import { Platform, View, StatusBar } from 'react-native'
 import { TabNavigator } from 'react-navigation'
 import { Ionicons } from '@expo/vector-icons';
 
@@ -36,6 +36,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
+        {Platform.os === 'android' && <StatusBar hidden />}
         <Tabs />
       </View>
     );

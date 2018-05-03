@@ -18,18 +18,21 @@ $ npm run start
 
 ```sh
 $ npm install -g create-react-native-app # install create native
-$ create-react-native-app weather-app # setup new project
-
-$ npm install --save query-string moment react-native-navigation # add dependencies
 
 # Workshop Steps:
-#   - create new project
+#   - present how app will look afterwards
+#   - setup a new project
+$ create-react-native-app weather-app
 #   - explain file structure
-#   - explain App.js structure
+#   - explain how to connect with emulator/device
+#   - explain App.js structure and present initial output
+#   - add dependencies
+$ npm install --save query-string moment react-native-navigation
 #   - add another view
 #   - add navigation
 #   - present stylesheets
 #   - make a search view
 #   - make the result view
+#   - explain network connect/data fetch
 #   - make the row view to display results
 ```
