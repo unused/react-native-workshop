@@ -42,6 +42,11 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 22,
   },
+  centered: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   error: {
     color: 'red',
     textAlign: 'center',

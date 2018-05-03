@@ -6,6 +6,9 @@ import moment from 'moment'
 
 /**
  * Weather Row entry.
+ *
+ * Note: Use Platform to demonstrate how to use conditions by choosing either
+ * ios or material design icons.
  **/
 export default class Row extends Component {
   icon () {

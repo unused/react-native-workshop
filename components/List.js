@@ -25,9 +25,12 @@ export default class List extends Component {
 
   /**
    * In lifecycle after render, fetch the data.
+   *
+   * Note: Use a timeout to demonstrate the loading icon that is shown before
+   * the results have been fetched.
    **/
   componentDidMount() {
-    this.fetchWeather();
+    setTimeout(this.fetchWeather.bind(this), 3000); // make API slow :)
   }
 
   /**
@@ -54,7 +57,7 @@ export default class List extends Component {
      * Show loading indicator until results are present.
      **/
     if (this.state.loading){
-      return <ActivityIndicator />;
+      return <ActivityIndicator style={styles.centered} />;
     }
     if (this.state.error) {
       return <Text style={styles.error}>Could not fetch weather :(</Text>;
