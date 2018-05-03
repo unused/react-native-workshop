@@ -21,7 +21,7 @@ class OpenWeatherAPI
 
   def self.params
     {
-      cnt: 10,
+      cnt: 14,
       mode: 'json',
       units: 'Metric',
       APPID: ENV['API_KEY']

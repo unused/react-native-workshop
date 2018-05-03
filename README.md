@@ -28,11 +28,10 @@ $ create-react-native-app weather-app
 #   - explain App.js structure and present initial output
 #   - add dependencies
 $ npm install --save query-string moment react-native-navigation
-#   - add another view
-#   - add navigation
-#   - present stylesheets
-#   - make a search view
-#   - make the result view
+#   - add navigation and views About and Search
+#   - present stylesheets (don't write all the styles, too much)
+#   - implement search form, explain input and input state
+#   - implement the result flat list and item presentation
 #   - explain network connect/data fetch
 #   - make the row view to display results
 ```

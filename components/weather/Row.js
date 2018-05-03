@@ -1,49 +1,31 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React, { Component } from 'react'
+import { Platform, View, Text } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
+import styles from '../../styles'
 import moment from 'moment'
 
-export default class Row extends React.Component{
-
-  day() {
-    const day = moment(this.props.day.dt * 1000).format('ddd');
-    return <Text>{day}</Text>
-  }
-
-  date() {
-    const day = moment(this.props.day.dt * 1000).format('DD/MM');
-    return <Text>{day}</Text>
-  }
-
+/**
+ * Weather Row entry.
+ **/
+export default class Row extends Component {
   icon () {
-    const type = this.props.day.weather[0].main.toLocaleLowerCase();
-    return <Text>{type}</Text>
+    const type = this.props.weather[0].main.toLocaleLowerCase();
+    const iconName = {
+      clouds: 'cloudy',
+      clear: 'sunny',
+      rain: 'rainy',
+    }[type] || 'default';
+    const iconPrefix = Platform.os === 'ios' ? 'ios' : 'md';
+    return <Ionicons name={`${iconPrefix}-${iconName}`} size={25} />;
   }
 
   render() {
     return (
-      <View style={style.view}>
-        <Text>{this.day()} {this.date()}</Text>
+      <View style={styles.row}>
+        <Text>{moment(this.props.dt * 1000).fromNow()}</Text>
         {this.icon()}
-        <Text style={style.temp}>{this.props.day.temp.day}°C</Text>
+        <Text style={styles.temp}>{this.props.temp.day}°C</Text>
       </View>
     )
   }
 }
-
-const style = StyleSheet.create({
-  view: {
-    borderWidth: 0,
-    borderBottomWidth: 1,
-    borderBottomColor: '#202340',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  temp: {
-    color: "#F00",
-    fontWeight: 'bold',
-    fontSize: 22
-  }
-})

@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Platform, View, StatusBar } from 'react-native'
 import { TabNavigator } from 'react-navigation'
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons'
 
 import About from './components/About'
 import Search from './components/Search'
 
 
+/**
+ * Configure the react navigation tab navigation component.
+ **/
 const Tabs = TabNavigator({
     Search: {screen: Search},
     About: {screen: About}
@@ -31,8 +34,12 @@ const Tabs = TabNavigator({
   }
 );
 
-// <StatusBar hidden={true} /> Note: breaks Android Emulator(!)
-export default class App extends React.Component {
+/**
+ * Main application entry point. TabNavigator will render active view.
+ *
+ * <StatusBar hidden={true} /> Note: breaks Android Emulator(!)
+ **/
+export default class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
