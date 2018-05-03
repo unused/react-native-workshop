@@ -6,6 +6,7 @@
 - React Basics
 - We Build a Weather App
 - Not covered: Testing :(
+- Q/A if there's time left
 
 ## React Native
 
@@ -17,8 +18,9 @@
 
 Components have...
 
-  - Immutable Props, Note: JavaScript has no immutables!
-  - State via Store
+  - Properties , immutable, Note: JavaScript has no immutables! Looks like
+    `this.props`
+  - State via Store, looks like `this.state`
 
 ## Templates via JSX
 
