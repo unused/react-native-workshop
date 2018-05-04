@@ -27,7 +27,7 @@ $ create-react-native-app weather-app
 #   - explain how to connect with emulator/device
 #   - explain App.js structure and present initial output
 #   - add dependencies
-$ npm install --save query-string moment react-native-navigation
+$ npm install --save query-string moment react-navigation
 #   - add navigation and views About and Search
 #   - present stylesheets (don't write all the styles, too much)
 #   - implement search form, explain input and input state
